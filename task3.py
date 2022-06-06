@@ -25,11 +25,37 @@ print(f'Least common multiple numbers {number_1} and {number_2} = {LСM}')
 
 # 3.	Составить список простых множителей натурального числа N
 
+'''
+def divising(number):
+    divisor = 2
+    list_of_divisors = []
+    while number >= divisor:
+        if number % divisor == 0:
+            list_of_divisors.append(divisor)
+            number//=divisor
+        else:
+            divisor+=1           
+    return list_of_divisors
+
+
+number = int(input('Enter natural number: '))
+print(divising(number))
+'''
 
 # 4.	Дана последовательность чисел. Получить список неповторяющихся элементов исходной последовательности
 # Пример: [1, 2, 3, 5, 1, 5, 3, 10] => [1, 2, 3, 5, 10]
-# 5.  Дан текстовый файл, содержащий целые числа. Удалить из него все четные числа.
+'''
+def selection_unique_numbers(number_list):
+    total_list = set(number_list)
+    return total_list
 
+
+number_list = [1, 2, 3, 5, 1, 5, 3, 10]
+total = list(selection_unique_numbers(number_list))
+print(total)
+'''
+# 5.  Дан текстовый файл, содержащий целые числа. Удалить из него все четные числа.
+'''
 import random
 
 
@@ -69,3 +95,4 @@ total_list = str_from_file.split()
 total_list = delete_even_numbers(total_list)
 print(total_list)
 rewrite_in_new_file(total_list)
+'''
